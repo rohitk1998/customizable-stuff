@@ -48,7 +48,7 @@ class ImageEditor extends React.Component {
 export default function EditorComponent({ onSave, isClickedState }) {
   const props = {
     includeUI: {
-      menu: ["shape", "filter", "text"],
+      menu: ["text", "icon"],
       initMenu: "filter",
       loadImage: {
         path: "https://images.unsplash.com/photo-1544003484-3cd181d17917?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80",
