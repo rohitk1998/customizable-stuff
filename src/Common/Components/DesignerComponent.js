@@ -7,6 +7,7 @@ import ProductTumbnail from "./ProductTumbnail";
 function DesignerComponent() {
   const [editedImage, setEditedImage] = useState(null);
   const [isClicked, setIsClicked] = useState(false);
+  const [isActive, setIsActive] = useState(0);
 
 
   const handleImageEdit = (value )=> {
@@ -56,8 +57,13 @@ function DesignerComponent() {
           mx-auto
           gap-5
           ">
-          <ProductTumbnail/>
-          <ProductTumbnail/>
+          {
+            [0,1].map((item,index)=> (
+            <div style={{border: isActive == index ? "2px solid #D4D1E4" : "" , borderRadius:"18px", overflow:"hidden"}}>
+               <ProductTumbnail />
+              </div>
+            ))
+          }
           </div>
           <div className="w-[90%] mx-auto flex justify-center items-start flex-col mt-11">
           <h1 className="text-4xl font-semibold text-black group-hover:text-white">
