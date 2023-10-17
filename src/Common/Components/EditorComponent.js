@@ -55,7 +55,7 @@ export default function EditorComponent({ onSave, isClickedState }) {
         name: "SampleImage",
       },
       uiSize: {
-        width: "1000px",
+        width: "100%",
         height: "700px",
       },
       menuBarPosition: "bottom",
@@ -69,7 +69,7 @@ export default function EditorComponent({ onSave, isClickedState }) {
   };
 
   return (
-    <div className="w-[90%] mx-auto justify-center items-center overflow-[hidden] p-10">
+    <div className="w-[100%] min-w-[400px] mx-auto justify-center items-center overflow-[hidden] p-10">
       <ImageEditor
         {...props}
         handleSave={onSave}

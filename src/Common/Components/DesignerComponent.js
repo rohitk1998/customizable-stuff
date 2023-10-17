@@ -25,20 +25,20 @@ function DesignerComponent() {
   }
 
   return (
-      <div className="w-[100%] grid xl:grid-cols-1 lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1 grid-cols-1">
+      <div className="w-[100%] h-[100vh] pt-[5%] bg-gray-100">
         <div
           className="justify-center items-start flex-row
-        w-[90%]
+        w-[100%]
         mx-auto
-        mt-[5%]
-        shadow-lg
         overflow-[hidden]
         rounded-3xl
         grid 
-        py-10
-        grid-cols-2
-        md:grid-cols-2
-        border-[1px]
+        grid-cols-1
+        md:grid-cols-1
+        sm:grid-cols-1
+        xl:grid-cols-2
+        lg:grid-cols-2
+        gap-[80px]
         "
         >
          <EditorComponent onSave={handleImageEdit} isClickedState={isClicked}/>
@@ -46,20 +46,21 @@ function DesignerComponent() {
          w-[100%]
          grid
          grid-row-5
-         justify-content-center
-         items-center
+         justify-start
+         items-start
+         mt-10
          ">
           <div className="
           flex
-          justify-content-start
-          items-center
+          justify-start
+          items-start
           w-[90%]
           mx-auto
           gap-5
           ">
           {
             [0,1].map((item,index)=> (
-            <div style={{border: isActive == index ? "2px solid #D4D1E4" : "" , borderRadius:"18px", overflow:"hidden"}}>
+            <div key={item} style={{border: isActive == index ? "2px solid white" : "" , borderRadius:"18px", overflow:"hidden"}}>
                <ProductTumbnail />
               </div>
             ))
@@ -69,7 +70,7 @@ function DesignerComponent() {
           <h1 className="text-4xl font-semibold text-black group-hover:text-white">
             Watter-Bottle Milton ,Color Black , Thermal Secure 
           </h1>
-          <h1 className="text-lg font-normal text-black group-hover:text-white mt-5">
+          <h1 className="mt-5 text-lg font-normal text-black group-hover:text-white">
             Price : $20
           </h1>
           </div>
@@ -106,7 +107,7 @@ function DesignerComponent() {
          <button className="
             w-[200px]
             h-[40px]
-            bg-gray-100
+            bg-white
             rounded-full
             p-2
           "
@@ -131,7 +132,7 @@ function DesignerComponent() {
            alt="" 
            width={210}
            height={210}
-           className="rounded-2xl shadow-2xl bg-gray-100"
+           className="bg-gray-100 shadow-2xl rounded-2xl"
            />
         </div>
       )}

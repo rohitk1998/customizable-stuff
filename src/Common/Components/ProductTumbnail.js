@@ -5,7 +5,7 @@ const ProductTumbnail = ()=> {
            alt="" 
            width={210}
            height={210}
-           className="rounded-2xl shadow-2xl bg-gray-100"
+           className="bg-gray-100 shadow-2xl rounded-2xl"
            />
     )
 }
